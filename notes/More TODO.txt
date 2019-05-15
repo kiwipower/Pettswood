@@ -83,4 +83,4 @@ Fill in Getting Started.doc
 (Automatically) update the documentation snippets - an sbt plugin?
 Sbt task to create template tests & Jang in wizzywig at start of test
 Test different failure modes (e.g. no file, badly formed table, etc) and check there are appropriate error messages
-
+Update documentation to show Descriptor examples
