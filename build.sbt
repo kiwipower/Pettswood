@@ -1,18 +1,14 @@
-import SonatypeKeys._
-
-sonatypeSettings
-
 name := "pettswood"
 
 organization := "com.github.agmenc"
 
-version := "0.2.1"
+version := "0.2.2"
 
-scalaVersion := "2.12.0"
+scalaVersion := "2.13.1"
 
-crossScalaVersions := Seq("2.11.7", "2.12.0")
+crossScalaVersions := Seq("2.11.7", "2.12.10", "2.13.1")
 
-scalacOptions ++= Seq("-unchecked", "-Yrangepos")
+scalacOptions ++= Seq("-unchecked", "-Yrangepos", "-language:postfixOps")
 
 testFrameworks += new TestFramework("org.pettswood.runners.sbt.PettswoodFramework")
 
@@ -20,15 +16,15 @@ testFrameworks += new TestFramework("org.pettswood.runners.sbt.PettswoodFramewor
 
 libraryDependencies ++= Seq(
   "net.sourceforge.htmlcleaner" % "htmlcleaner" % "2.8",
-  "org.specs2" %% "specs2-core" % "3.8.6" % "test",
-  "org.specs2" %% "specs2-mock" % "3.8.6" % "test",
-  "org.specs2" %% "specs2-junit" % "3.8.6" % "test",
-  "org.specs2" %% "specs2-matcher-extra" % "3.8.6" % "test",
+  "org.specs2" %% "specs2-core" % "4.8.3" % "test",
+  "org.specs2" %% "specs2-mock" % "4.8.3" % "test",
+  "org.specs2" %% "specs2-junit" % "4.8.3" % "test",
+  "org.specs2" %% "specs2-matcher-extra" % "4.8.3" % "test",
   "junit" % "junit" % "4.8.1" % "test" withSources(),
   "org.scala-tools.testing" % "test-interface" % "0.5"
 )
 
-libraryDependencies += "org.scala-lang.modules" %% "scala-xml" % "1.0.5"
+libraryDependencies += "org.scala-lang.modules" %% "scala-xml" % "1.2.0"
 
 // --------- Publishing -----------------------
 
