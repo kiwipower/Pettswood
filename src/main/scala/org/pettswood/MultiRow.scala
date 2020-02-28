@@ -6,6 +6,7 @@ trait MultiRow extends Concept {
   
   def columns: PartialFunction[String, (String) => Probe]
   def initialiseRow() {}
+  def rowComplete() {}
 
   private var rowPointer = 0
   var currentProbes, probeTemplate = List.empty[(String) => Probe]
