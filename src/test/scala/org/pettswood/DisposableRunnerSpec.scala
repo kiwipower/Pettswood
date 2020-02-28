@@ -41,7 +41,7 @@ class DisposableRunnerSpec extends SpecificationWithJUnit with Mockito with Thro
 
       fixture.runner run "src/test/resources/category/some.file"
 
-      there was one(fixture.fileSystem).save(<decorated></decorated> toString())
+      there was one(fixture.fileSystem).save(<decorated></decorated> toString)
     }
 
     "Put the output file hierarchy in target" in {
@@ -67,7 +67,7 @@ class DisposableRunnerSpec extends SpecificationWithJUnit with Mockito with Thro
 
       fixture.runner run "src/test/resources/category/some.file"
 
-      there was one(fixture.fileSystem).save(<decorated></decorated> toString())
+      there was one(fixture.fileSystem).save(<decorated></decorated> toString)
     }
 
     "Put the output file heirarchy in target" in {

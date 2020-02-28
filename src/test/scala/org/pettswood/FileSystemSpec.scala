@@ -6,11 +6,10 @@ import org.specs2.mutable.SpecificationWithJUnit
 import org.specs2.mock._
 import io.Source._
 import java.io.File
-import org.specs2.specification.AfterExample
 import util.Properties._
 import scala.xml.NodeSeq
 
-class FileSystemSpec extends SpecificationWithJUnit with Mockito with AfterExample {
+class FileSystemSpec extends SpecificationWithJUnit with Mockito {
 
   args(sequential = true)
 
@@ -67,8 +66,8 @@ class FileSystemSpec extends SpecificationWithJUnit with Mockito with AfterExamp
       fileSystem in "src/test" find ".*.html" must contain ( s"${BASE_PATH}/${config.sourceRoot}/WritingTestsAndFixture.html" )
 
       fileSystem in "src/main/scala/" find "R.*.scala" must be equalTo List(
-        s"$BASE_PATH/src/main/scala/org/pettswood/MultiRow.scala",
         s"$BASE_PATH/src/main/scala/org/pettswood/Result.scala",
+        s"$BASE_PATH/src/main/scala/org/pettswood/MultiRow.scala",
         s"$BASE_PATH/src/main/scala/org/pettswood/ResultSummary.scala",
         s"$BASE_PATH/src/main/scala/org/pettswood/runners/DisposableRunner.scala"
       )
