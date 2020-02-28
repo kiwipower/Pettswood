@@ -6,11 +6,10 @@ import org.specs2.mutable.SpecificationWithJUnit
 import org.specs2.mock._
 import io.Source._
 import java.io.File
-import org.specs2.specification.AfterExample
 import util.Properties._
 import scala.xml.NodeSeq
 
-class FileSystemSpec extends SpecificationWithJUnit with Mockito with AfterExample {
+class FileSystemSpec extends SpecificationWithJUnit with Mockito {
 
   args(sequential = true)
 
